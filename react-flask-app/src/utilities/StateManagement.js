@@ -3,7 +3,9 @@ import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import Backdrop from '../Components/Backdrop/Backdrop'
 import ComponentDisplay from '../Components/ComponentDisplay/ComponentDisplay'
+import SidePanel from '../Components/SidePanel/SidePanel'
 
+import background from '../images/background.png'
 function StateManagement(props) {
     const [node, setNode]= useState(null)
   const [sidePanelOpen, setsidePanelOpen] = useState(false);
@@ -72,13 +74,14 @@ function StateManagement(props) {
      
   
     return (
-        <div className="state-managment">
+        <div className="state-managment" >
         {(sidePanelOpen)? (<Backdrop />): (null)}
-
-          <nav>
-            <div className="up">&larr; UP</div>
+        <SidePanel show={sidePanelOpen} click={backdropClickHandler} />
+          <nav >
+            <div className="up">&uarr; UP</div>
             <div className="login" onClick={sidePanelOpenClickHandler}>&rarr; Login / Sign Up</div>
-                  
+            
+ 
         </nav></div>
     )
 }

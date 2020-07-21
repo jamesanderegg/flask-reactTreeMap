@@ -141,7 +141,9 @@ function TreeMap(props) {
   }
   return (
     <div className="feature" ref={ref}>
-    <StateManagment treeMapData={props.treeMapData} clickData={clickData}/>
+    <StateManagment treeMapData={props.treeMapData} clickData={clickData}>
+
+        </StateManagment>
         
         
     </div>
