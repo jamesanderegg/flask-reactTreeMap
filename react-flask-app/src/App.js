@@ -9,7 +9,8 @@ function App() {
   const [treeMap, setTreeMap] = useState(null);
 
   useEffect(() => {
-  
+    localStorage.setItem('usertoken', 0)
+    
     setTreeMap(pageData[0])
   }, [])
   

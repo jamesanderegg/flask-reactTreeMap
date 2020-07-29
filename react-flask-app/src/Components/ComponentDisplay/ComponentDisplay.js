@@ -11,7 +11,7 @@ import React, { useState, useEffect } from "react";
 
 function ComponentDisplay(props) {
   useEffect(() => {
-    // console.log("Component", props)
+    console.log("Component", props)
   }, [props]);
 
   return (

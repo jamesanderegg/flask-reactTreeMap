@@ -56,7 +56,6 @@ nav .login:hover {
 
 .node {
   position: absolute;
-  background: transparent url("") no-repeat 50%/cover;
   overflow: hidden;
   opacity: 1.0;
   transition: opacity 0.8s;
