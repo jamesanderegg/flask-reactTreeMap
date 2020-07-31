@@ -11,12 +11,12 @@ import React, { useState, useEffect } from "react";
 
 function ComponentDisplay(props) {
   useEffect(() => {
-    console.log("Component", props)
+    // console.log("Component", props)
   }, [props]);
 
   return (
     <div
-      className="container-fluid"
+      className="component-display"
       style={{ marginTop: "70px", height: "100%" }}
     >
       {/* <h4>{props.data.name}</h4> */}

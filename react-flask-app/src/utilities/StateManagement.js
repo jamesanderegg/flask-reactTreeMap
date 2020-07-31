@@ -29,6 +29,8 @@ function StateManagement(props) {
     var newNode = null;
     //Make sure we have click Data to see what we will render
     if (props.clickData) {
+
+      console.log(props.clickData.height)
       if (props.clickData.id == "datafluent") {
         newNode = document.getElementById(props.clickData.id);
         ReactDOM.render(
@@ -40,7 +42,6 @@ function StateManagement(props) {
       } else if (props.clickData.height == 1) {
         
         newNode = document.getElementById(props.clickData.data.children[0].id);
-        console.log(props.treeMapData.children[0].children[2].children[0])
         ReactDOM.render(
           <React.StrictMode>
             <ComponentDisplay data={props.treeMapData.children[0].children[2].children[0]} />
@@ -49,6 +50,14 @@ function StateManagement(props) {
         );
         setNode(newNode);
       } else if (props.clickData.height === 2) {
+        console.log(props.clickData.data.children)
+        newNode = document.getElementById(props.clickData.data.children[2].id);
+        
+        ReactDOM.render(
+          <React.StrictMode>
+            <ComponentDisplay data={props.treeMapData.children[0].children[2].children[0]} />
+          </React.StrictMode>,
+          newNode);
         if (node) {
           // console.log(node.style)
           ReactDOM.unmountComponentAtNode(node);

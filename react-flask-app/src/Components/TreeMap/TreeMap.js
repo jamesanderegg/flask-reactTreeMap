@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import * as d3 from "d3";
 import StateManagment from "../../utilities/StateManagement";
-
+import Resume from '../Resume/Resume'
 import "./zoom.css";
 
 function TreeMap(props) {
@@ -77,13 +77,20 @@ function TreeMap(props) {
           return color(d.data.name);
         })
         .on("click", function (d) {
-          return d.depth < 3 ? zoom(d) : null;
+          if(d.data.name !== 'Resume'){
+            return d.depth < 3 ? zoom(d) : null;
+          }
         });
       Cells.append("p")
         .attr("class", "label")
         .text(function (d) {
-          return d.data.name ? d.data.name : "---";
+          //Resume Component needs to be rendered so we leave it out.
+          if(d.data.name !== "Resume"){
+            return d.data.name ? d.data.name : "---";
+          }
+          
         });
+      
       // Cells.append("p").attr("class", "text").text(function(d) {
       //     return d.data.displayText ? d.data.displayText : "---";
       // });
@@ -111,7 +118,7 @@ function TreeMap(props) {
         if (d.data.id == "resumeMap") {
           Cells.transition(t)
             .style("left", function (d) {
-              return x(d.x0) + 30 + "%";
+              return x(d.x0) + 60 + "%";
             })
             .style("top", function (d) {
               return y(d.y0) + "%";
@@ -129,10 +136,10 @@ function TreeMap(props) {
               return d.children ? true : false;
             });
     
-            Cells.filter(function (d) {
-              // show this depth + 1 and below
-              return d.depth > currentDepth;
-            }).classed("hide", false);
+            // Cells.filter(function (d) {
+            //   // show this depth + 1 and below
+            //   return d.depth > currentDepth;
+            // }).classed("hide", false);
 
           return;
         }

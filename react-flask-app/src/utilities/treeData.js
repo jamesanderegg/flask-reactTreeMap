@@ -30,7 +30,7 @@ const pageData = [
             ],
           },
           {
-            name: "Contact-Resume",
+            name: "Resume",
             id: "resumeMap",
             children: [
               {
