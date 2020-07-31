@@ -1,12 +1,13 @@
-ul{
+.resume-ul{
     list-style: none;
     justify-content: start;
     max-width: 200px;
 }
-li{
+.resume-li{
     margin: 95px 0;
-    text-align: center;
-       
+    text-align: center;   
 }
-
+.resume-li h5{
+    margin: 20px 0;
+}
 

@@ -50,14 +50,23 @@ function StateManagement(props) {
         );
         setNode(newNode);
       } else if (props.clickData.height === 2) {
-        console.log(props.clickData.data.children)
-        newNode = document.getElementById(props.clickData.data.children[2].id);
         
+        newNode = document.getElementById(props.clickData.data.children[2].id);
+        console.log(props.treeMapData.children[0].children[2].children[0])
         ReactDOM.render(
           <React.StrictMode>
             <ComponentDisplay data={props.treeMapData.children[0].children[2].children[0]} />
           </React.StrictMode>,
           newNode);
+          newNode = document.getElementById(props.clickData.data.children[0].id);
+          console.log(props.treeMapData.children[0].children[0])
+        ReactDOM.render(
+          <React.StrictMode>
+            <ComponentDisplay data={props.treeMapData.children[0].children[0]} />
+          </React.StrictMode>,
+          newNode);
+
+
         if (node) {
           // console.log(node.style)
           ReactDOM.unmountComponentAtNode(node);
