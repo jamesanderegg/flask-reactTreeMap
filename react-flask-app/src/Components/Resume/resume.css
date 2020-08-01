@@ -19,7 +19,21 @@
     color: rgb(204, 204, 83);
     cursor: pointer;
 }
-
+.copy-clip{
+    color: grey;
+    font-size: 14px;
+    max-width: 150px;
+    margin: auto;
+    
+}
+.copy-email{
+    font-weight: bold;
+    
+    font-size: 10px;
+    max-width: 150px;
+    margin: auto;
+    word-break: break-all;
+}
 @media only screen and (max-width: 600px){
     
     /* .resume-div{
