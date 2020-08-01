@@ -52,19 +52,20 @@ function StateManagement(props) {
       } else if (props.clickData.height === 2) {
         
         newNode = document.getElementById(props.clickData.data.children[2].id);
-        console.log(props.treeMapData.children[0].children[2].children[0])
+        //CONTACT ME
         ReactDOM.render(
           <React.StrictMode>
             <ComponentDisplay data={props.treeMapData.children[0].children[2].children[0]} />
           </React.StrictMode>,
           newNode);
-          newNode = document.getElementById(props.clickData.data.children[0].id);
-          console.log(props.treeMapData.children[0].children[0])
-        ReactDOM.render(
-          <React.StrictMode>
-            <ComponentDisplay data={props.treeMapData.children[0].children[0]} />
-          </React.StrictMode>,
-          newNode);
+          //ABOUT ME
+        //   newNode = document.getElementById(props.clickData.data.children[0].id);
+        //   console.log(props.treeMapData.children[0].children[0])
+        // ReactDOM.render(
+        //   <React.StrictMode>
+        //     <ComponentDisplay data={props.treeMapData.children[0].children[0]} />
+        //   </React.StrictMode>,
+        //   newNode);
 
 
         if (node) {

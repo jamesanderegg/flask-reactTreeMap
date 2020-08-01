@@ -1,7 +1,9 @@
 import Landing from "../Components/Landing/Landing";
 import Resume from "../Components/Resume/Resume";
 import Skills from "../Components/Skills/Skills"
+import WhatIDo from  '../Components/WhatIDo/WhatIdo'
 // import About from "./components/About"
+import React from 'react'
 
 const pageData = [
   {
@@ -17,7 +19,7 @@ const pageData = [
             name: "About me",
             displayText: null,
             id: "aboutMap",
-            component: Skills,
+            component: WhatIDo,
             children: [
               { name: "About me", value: "what is this", id: "about" },
             ],
@@ -38,7 +40,7 @@ const pageData = [
                 name: "Contact Me",
                 value: "cgi-1.jpg",
                 id: "resume",
-                component: Resume,
+                component: <Resume/>,
               },
             ],
           },

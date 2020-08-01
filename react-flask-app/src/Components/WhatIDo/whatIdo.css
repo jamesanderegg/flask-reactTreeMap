@@ -1,0 +1,17 @@
+
+.what-ul{
+    list-style: none;
+    margin-left: 100px;
+    margin-top: 20px;
+    
+}
+.what-li{
+    width: 200px;
+    margin: 20px;
+    display: inline-block;
+    text-align: center;
+}
+.what-h4{
+    
+}
+

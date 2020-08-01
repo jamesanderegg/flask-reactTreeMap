@@ -1,13 +1,28 @@
 .resume-ul{
-    list-style: none;
-    justify-content: start;
-    max-width: 200px;
+   margin: 34% auto;
+    text-align: center;
 }
-.resume-li{
-    margin: 95px 0;
-    text-align: center;   
+.resume-div{
+    margin: 70px 0;
+    
+ 
 }
-.resume-li h5{
-    margin: 20px 0;
+.github-button{
+    color:black
 }
 
+.github-button :hover{
+    color: rgb(204, 204, 83);
+    text-decoration: none;
+}
+.resume-div :hover{
+    color: rgb(204, 204, 83);
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px){
+    
+    /* .resume-div{
+        margin-right: 200px;
+    } */
+}

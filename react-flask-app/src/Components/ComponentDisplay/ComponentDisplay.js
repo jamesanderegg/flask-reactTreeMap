@@ -17,7 +17,7 @@ function ComponentDisplay(props) {
   return (
     <div
       className="component-display"
-      style={{ marginTop: "70px", height: "100%" }}
+      style={{height: "100%"}}
     >
       {/* <h4>{props.data.name}</h4> */}
       {props.data.component}
