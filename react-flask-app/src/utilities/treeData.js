@@ -19,7 +19,7 @@ const pageData = [
             name: "About me",
             displayText: null,
             id: "aboutMap",
-            component: WhatIDo,
+            component: <WhatIDo/>,
             children: [
               { name: "About me", value: "what is this", id: "about" },
             ],

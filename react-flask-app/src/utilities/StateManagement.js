@@ -40,11 +40,11 @@ function StateManagement(props) {
           newNode
         );
       } else if (props.clickData.height == 1) {
-        
+        // ABOUT ME
         newNode = document.getElementById(props.clickData.data.children[0].id);
         ReactDOM.render(
           <React.StrictMode>
-            <ComponentDisplay data={props.treeMapData.children[0].children[2].children[0]} />
+            <ComponentDisplay data={props.treeMapData.children[0].children[0]} />
           </React.StrictMode>,
           newNode
         );

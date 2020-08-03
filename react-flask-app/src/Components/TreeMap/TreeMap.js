@@ -84,15 +84,15 @@ function TreeMap(props) {
 
         // THIS IS HOW D3 APPENDS THE TEXT.
 
-      // Cells.append("p")
-      //   .attr("class", "label")
-      //   .text(function (d) {
-      //     //Resume Component needs to be rendered so we leave it out.
-      //     if(d.data.name != "Resume"){
-      //       return d.data.name ? d.data.name : "---";
-      //     }
+      Cells.append("p")
+        .attr("class", "label")
+        .text(function (d) {
+          //Resume Component needs to be rendered so we leave it out.
+          if(d.data.name != "Resume"){
+            return d.data.name ? d.data.name : "---";
+          }
           
-      //   });
+        });
       
       // Cells.append("p").attr("class", "text").text(function(d) {
       //     return d.data.displayText ? d.data.displayText : "---";

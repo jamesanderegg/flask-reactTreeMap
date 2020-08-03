@@ -64,6 +64,9 @@ nav .login:hover {
 #resumeMap{
   cursor: default;
 }
+#about{
+  cursor: default;
+}
 .node .label {
   display: inline;
   font-family: sans-serif;
