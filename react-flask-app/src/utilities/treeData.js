@@ -16,7 +16,7 @@ const pageData = [
         component: Landing,
         children: [
           {
-            name: "About me",
+            name: "My skills",
             displayText: null,
             id: "aboutMap",
             component: <WhatIDo/>,

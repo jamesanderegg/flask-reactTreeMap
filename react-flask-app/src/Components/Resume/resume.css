@@ -8,19 +8,21 @@
  
 }
 .github-button{
-    color:black
+    color:white
 }
-
+.resume-div{
+    color: white;
+}
 .github-button :hover{
     color: rgb(204, 204, 83);
     text-decoration: none;
 }
 .resume-div :hover{
-    color: rgb(204, 204, 83);
+    color: rgb(204, 179, 179);
     cursor: pointer;
 }
 .copy-clip{
-    color: grey;
+    color: rgb(214, 214, 214);
     font-size: 14px;
     max-width: 150px;
     margin: auto;

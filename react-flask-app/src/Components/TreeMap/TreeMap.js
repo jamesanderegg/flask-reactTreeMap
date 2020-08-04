@@ -25,7 +25,7 @@ function TreeMap(props) {
           .treemap()
           .size([width, height])
           //.tile(d3.treemapResquarify) // doesn't work - height & width is 100%
-          .paddingInner(0)
+          .paddingInner(.2)
           .round(false);
       var data;
 

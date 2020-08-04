@@ -45,13 +45,14 @@ function Resume() {
       <div className="resume-div" onMouseEnter={() => setTextHidden(true)}
           onMouseLeave={() => setTextHidden(false)}
           onClick={() =>navigator.clipboard.writeText('jamesanderegg@jamesanderegg.com')}>
+          <p className="copy-clip">Click to copy Email</p>
         <i className="fas fa-at fa-2x"></i>
         <h5
           
         >
           Email
         </h5>
-        {textHidden && <><p className="copy-clip">Click to copy email to clipboard</p>
+        {textHidden && <>
         <p className="copy-email">jamesanderegg@jamesanderegg.com</p></>}
       </div>
     </div>

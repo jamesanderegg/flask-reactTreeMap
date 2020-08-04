@@ -1,0 +1,31 @@
+.jumbo{
+    height: 100%;
+    background-color: rgba(206, 206, 206, 0.767);
+}
+.layout-ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.layout-li{
+    border: 2px solid black;
+    margin:  4px 13px;
+    padding-top: 5px;
+    width: 240px;
+    
+    
+}
+.layout-p{
+    font-size: medium;
+}
+#layout-icon{
+    float: left;
+    margin: 0 20px;
+}
+@media only screen and (max-height: 730px){
+    
+    .layout-ul{
+        display: none;
+    }
+}
