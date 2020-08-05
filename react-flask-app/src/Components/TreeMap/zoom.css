@@ -66,6 +66,11 @@ nav .login:hover {
 }
 #about{
   cursor: default;
+  overflow: scroll;
+}
+#projects{
+  overflow: scroll;
+  cursor: default;
 }
 #aboutMap{
   background-image: url("http://localhost:3000/uploads/images/wire-frame-mtns-all.png");

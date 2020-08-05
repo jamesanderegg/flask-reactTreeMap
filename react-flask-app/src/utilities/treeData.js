@@ -1,9 +1,10 @@
 import Landing from "../Components/Landing/Landing";
 import Resume from "../Components/Resume/Resume";
-import Skills from "../Components/Skills/Skills"
-import WhatIDo from  '../Components/WhatIDo/WhatIdo'
+import Skills from "../Components/Skills/Skills";
+import WhatIDo from "../Components/WhatIDo/WhatIdo";
+import Projects from "../Components/Projects/Projects"
 // import About from "./components/About"
-import React from 'react'
+import React from "react";
 
 const pageData = [
   {
@@ -19,7 +20,7 @@ const pageData = [
             name: "My skills",
             displayText: null,
             id: "aboutMap",
-            component: <WhatIDo/>,
+            component: <WhatIDo />,
             children: [
               { name: "About me", value: "what is this", id: "about" },
             ],
@@ -27,9 +28,14 @@ const pageData = [
           {
             name: "Projects",
             id: "projectsMap",
-            displayText: null,
+            component: <Projects />,
             children: [
-              { name: "My Projects", value: "cgi-1.jpg", id: "projects" },
+              {
+                name: "My Projects",
+                value: "cgi-1.jpg",
+                id: "projects",
+                
+              },
             ],
           },
           {
@@ -40,7 +46,7 @@ const pageData = [
                 name: "Contact Me",
                 value: "cgi-1.jpg",
                 id: "resume",
-                component: <Resume/>,
+                component: <Resume />,
               },
             ],
           },

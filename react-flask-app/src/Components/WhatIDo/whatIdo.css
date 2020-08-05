@@ -30,9 +30,3 @@
 .bottom-h6{
     margin: 10px;
 }
-@media screen and (max-width: 1024px) {
-    .hide-li {
-        font-size: 25px;
-        display: none !important;
-    }
-}

@@ -1,0 +1,20 @@
+.tag{
+    margin: 4px;
+}
+.tags-button{
+    font: bold 14px/1 sans-serif;
+  color: white;
+  
+  padding: 5px;
+  background-color: rgba(26, 91, 230, 0.8);
+  float: left;
+  cursor: pointer;
+}
+.tags-ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 90px auto;
+    width: 50%;
+}
