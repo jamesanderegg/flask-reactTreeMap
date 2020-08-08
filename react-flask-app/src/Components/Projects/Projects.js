@@ -1,9 +1,15 @@
-import React from "react";
+import React, {useState} from "react";
 import projects from './projectsMap'
 import Tags from './Tags/Tags'
 
 const Projects = ()=>{
     const _ = require('lodash')
+    const [tagProject, setTagProject]= useState(null);
+
+    const registerTag = (e) => {
+        console.log(e)
+        };
+      
     let tags = []
     _.each(projects,edge =>{
         if(_.get(edge, 'tags')){
@@ -22,10 +28,10 @@ const Projects = ()=>{
     
 
     return(
- <div className="container">
-     <Tags tags={tags} tagsCount={tagCounts}/>
+ 
+     <Tags tags={tags} tagsCount={tagCounts} tagProject={setTagProject}/>
    
- </div>
+ 
 )};
 
 export default Projects;

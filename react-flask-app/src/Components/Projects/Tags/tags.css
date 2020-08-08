@@ -7,14 +7,20 @@
   
   padding: 5px;
   background-color: rgba(26, 91, 230, 0.8);
-  float: left;
   cursor: pointer;
+}
+.tag :hover{
+  background-color: rgba(12, 28, 61, 0.8);
 }
 .tags-ul{
     list-style: none;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 90px auto;
-    width: 50%;
+    margin: 0 auto;
+    width: 99%;
+}
+.tag-title{
+    text-align: center;
+    margin-top: 43px;
 }

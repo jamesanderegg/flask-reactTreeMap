@@ -84,7 +84,7 @@ function TreeMap(props) {
 
         // THIS IS HOW D3 APPENDS THE TEXT.
 
-      Cells.append("p")
+      Cells.append("h3")
         .attr("class", "label")
         .text(function (d) {
           //Resume Component needs to be rendered so we leave it out.

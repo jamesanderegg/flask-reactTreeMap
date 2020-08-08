@@ -3,11 +3,11 @@ import "./whatIdo.css";
 const WhatIDo = () => {
 
   return (
-    <div className="container">
+    
       <div className="what-ul" id="dashboard">
         <div className="button-div" id="dashboard" >
           <div className="what-div" id="dashboard">
-            <i className="fas fa-chart-line fa-3x" id="dashboard"></i>
+            <i className="fas fa-chart-line fa-2x" id="dashboard"></i>
             <h4 className="what-h4" id="dashboard">
               Dashboards
             </h4>
@@ -25,7 +25,7 @@ const WhatIDo = () => {
         </div>
         <div className="button-div" id="wrangle" >
           <div className="what-div" id="wrangle">
-            <i className="fas fa-table fa-3x" id="wrangle"></i>
+            <i className="fas fa-table fa-2x" id="wrangle"></i>
             <h4 className="what-h4" id="wrangle">
               Data Wrangling
             </h4>
@@ -43,7 +43,7 @@ const WhatIDo = () => {
         </div>
         <div className="button-div" id="fullStack" >
           <div className="what-div" id="fullStack">
-            <i className="fas fa-database fa-3x" id="fullStack"></i>
+            <i className="fas fa-database fa-2x" id="fullStack"></i>
             <h4 className="what-h4" id="fullStack">
               Full Stack Development
             </h4>
@@ -63,10 +63,10 @@ const WhatIDo = () => {
           layout.
         </h6>
         <h6 className="bottom-h6">
-          Check out my projects for a better list of my skills.
+          Check out my projects!
         </h6>
       </div>
-    </div>
+    
   );
 };
 

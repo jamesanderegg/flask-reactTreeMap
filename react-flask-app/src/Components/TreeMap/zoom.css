@@ -61,6 +61,9 @@ nav .login:hover {
   transition: opacity 0.8s;
   cursor: pointer;
 }
+#datafluent{
+  overflow: scroll;
+}
 #resumeMap{
   cursor: default;
 }
@@ -73,21 +76,21 @@ nav .login:hover {
   cursor: default;
 }
 #aboutMap{
-  background-image: url("http://localhost:3000/uploads/images/wire-frame-mtns-all.png");
+  background-image: url("http://localhost:3000/uploads/images/wireframe-all.png");
   background-size: 100% 100%;
   background-attachment: fixed;
   background-position: bottom left;
   background-repeat: no-repeat
 }
 #projectsMap{
-  background-image: url("http://localhost:3000/uploads/images/wire-frame-mtns-all.png");
+  background-image: url("http://localhost:3000/uploads/images/wireframe-all.png");
   background-size: 100% 100%;
   background-attachment: fixed;
   background-position: bottom left;
   background-repeat: no-repeat
 }
 #resumeMap{
-  background-image: url("http://localhost:3000/uploads/images/wire-frame-mtns-all.png");
+  background-image: url("http://localhost:3000/uploads/images/wireframe-all.png");
   background-size: 100% 100%;
   background-attachment: fixed;
   background-position: bottom left;

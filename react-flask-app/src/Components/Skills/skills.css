@@ -1,3 +1,13 @@
+
 .skills-li{
-    font-size: 18px;
+    font-size: medium;
+}
+.skills-title{
+    text-align: center;
+}
+.skills-ul{
+    margin: 0 auto;
+}
+.skills-row{
+    margin-bottom: 50px;
 }

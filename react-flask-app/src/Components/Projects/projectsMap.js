@@ -27,7 +27,7 @@ const projects = [
         description: "A Heatmap of my GPS data over the last few years.",
         component: "GoogleGps",
         url: 'https://leafletjs.com/',
-        tags: "javascript, data, leaflet, heatmap, d3",
+        tags: "javascript, data, leaflet, heatmap, d3, map",
         image: '',
         text: "I downloaded my GPS data from google and used Leaflet JS to map it.  I also used a heatmap and loading spinner librarys.  It's pulling over 1 million rows from my database so please give it time to load.  "
     },
@@ -37,7 +37,7 @@ const projects = [
         description: "A map of Denvers phone information hotline, 311, for the year 2016",
         component: "Denver311",
         url: '',
-        tags: "javascript, data, leaflet, heatmap, d3, denver, css",
+        tags: "javascript, data, leaflet, heatmap, d3, denver, css, map",
         image: '/static/react/images/denver311.png',
         text: "Denver has an open data city catalog with lots of datasets.  This is the information hotline, sorted by complaints for the year 2016.  I've made the data searchable."
     },
@@ -47,7 +47,7 @@ const projects = [
         description: "A barchart animation, year over year, MLB on base percentage.",
         component: "WorldSeries",
         url: 'https://github.com/jamesanderegg/part3_barchartTransitions',
-        tags: "d3, transitions, web scraping, javascript, css, data analysis",
+        tags: "d3, transitions, web scraping, javascript, css, data analysis, baseball",
         image: '',
         text: "I followed Swizecs tutorial on how to build Moores Law with d3 animations and this is my own interpertaion with MLB stats."
     },

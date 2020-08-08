@@ -1,7 +1,7 @@
 import React from "react";
 import RandoBarChart from "../RandoBarChart";
 import "./Landing.css";
-
+import WhatIDo from '../WhatIDo/WhatIdo'
 const Landing = (
   <div className="container">
     <div className="jumbotron mt-5 jumbo">
@@ -19,28 +19,9 @@ const Landing = (
         </div>
       </div>
       <h5 style={{ textAlign: "center" }}>Click anywhere to enter!</h5>
-      <ul className="layout-ul">
-        <li className="layout-li">
-          <i className="fas fa-database" id="layout-icon"></i>
-          <p className="layout-p" id="layout-fullStack">
-            Full Stack Development
-          </p>
-        </li>
-        <li className="layout-li">
-          <i className="fas fa-table" id="layout-icon"></i>
-          <p className="layout-p" id="layout-wrangle">
-            Data Wrangling
-          </p>
-        </li>
-        <li className="layout-li">
-          <i className="fas fa-chart-line" id="layout-icon"></i>
-
-          <p className="layout-p" id="layout-dashboard">
-            Dashboards
-          </p>
-        </li>
-      </ul>
     </div>
+    <WhatIDo />
+
   </div>
 );
 
