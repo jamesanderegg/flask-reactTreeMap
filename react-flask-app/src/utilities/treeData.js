@@ -26,12 +26,12 @@ const pageData = [
             ],
           },
           {
-            name: "Projects",
+            name: "My Work",
             id: "projectsMap",
             component: <Projects />,
             children: [
               {
-                name: "My Projects",
+                name: "My Work",
                 value: "cgi-1.jpg",
                 id: "projects",
                 

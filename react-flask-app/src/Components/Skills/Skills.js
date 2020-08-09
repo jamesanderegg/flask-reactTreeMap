@@ -3,7 +3,7 @@ import "./skills.css";
 const Skills = () => {
   return(
     <>
-    <h5 className="skills-title">Below is a list of the tools I practice regularly with.</h5>
+    <h5 className="skills-title">My Best Tools:</h5>
  <div className="row skills-row">
  
         <ul className="skills-ul">
@@ -31,12 +31,11 @@ const Skills = () => {
         <ul className="skills-ul">
           <h5 className="skills-title">Miscellaneous</h5>
           <li className="skills-li"> SQL</li>
-          <li className="skills-li"> Excel/VBA</li>
-          <li className="skills-li">R</li>
+          <li className="skills-li"> Excel</li>
           <li className="skills-li"> PowerBi</li>
           <li className="skills-li"> Machine Learning</li>
           <li className="skills-li"> Tableau</li>
-          <li className="skills-li"> Python Anywhere</li>
+          <li className="skills-li"> Kaggle</li>
         </ul>
       </div>
       </>
