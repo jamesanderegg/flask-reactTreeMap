@@ -18,7 +18,7 @@ const projects = [
         component: "SnakeApp",
         url: '',
         tags: "game, hooks, react, javascript, css, html, tutorial",
-        image: '/static/react/images/python.png',
+        image: 'http://localhost:3000/uploads/images/python.png',
         text: "This was a tutorial I followed by Chigabiga on youtube.  Use the arrows on your keyboard to move the snake.  Eat red apples to grow."
     },
     {
@@ -28,7 +28,7 @@ const projects = [
         component: "GoogleGps",
         url: 'https://leafletjs.com/',
         tags: "javascript, data, leaflet, heatmap, d3, map",
-        image: '',
+        image: 'http://localhost:3000/uploads/images/heatMap.png',
         text: "I downloaded my GPS data from google and used Leaflet JS to map it.  I also used a heatmap and loading spinner librarys.  It's pulling over 1 million rows from my database so please give it time to load.  "
     },
     {
@@ -38,7 +38,7 @@ const projects = [
         component: "Denver311",
         url: '',
         tags: "javascript, data, leaflet, heatmap, d3, denver, css, map",
-        image: '/static/react/images/denver311.png',
+        image: 'http://localhost:3000/uploads/images/denver311.png',
         text: "Denver has an open data city catalog with lots of datasets.  This is the information hotline, sorted by complaints for the year 2016.  I've made the data searchable."
     },
     {
@@ -48,7 +48,7 @@ const projects = [
         component: "WorldSeries",
         url: 'https://github.com/jamesanderegg/part3_barchartTransitions',
         tags: "d3, transitions, web scraping, javascript, css, data analysis, baseball",
-        image: '',
+        image: 'http://localhost:3000/uploads/images/worldSeries.png',
         text: "I followed Swizecs tutorial on how to build Moores Law with d3 animations and this is my own interpertaion with MLB stats."
     },
     {
@@ -58,8 +58,18 @@ const projects = [
         component: "Tetris",
         url: 'https://github.com/jamesanderegg/react_tetris',
         tags: "game, hooks, html, css, tutorial",
-        image: '',
+        image: 'http://localhost:3000/uploads/images/tetris.png',
         text: "This was a tutorial I followed."
+    },
+    {
+        name: 'The School of the Natural Order',
+        id: 'snoc',
+        description: "A website I built for a client in React with Gatsby.",
+        component: "SNOC",
+        url: 'https://github.com/jamesanderegg/schoolofnaturalordercolorado',
+        tags: "react, gatsby, html, css, website, parallax, javascript, github,",
+        image: '',
+        text: "A website for the School of the Natural Order."
     }
 ]
 export default projects;

@@ -1,12 +1,51 @@
 .card{
     max-width: 300px;
-    
     margin: 5px auto;
+    animation: fade-in 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
     
+}
+.card-image{
+    margin: 8px auto;
+    padding: 2px;
+    width:95%;
+    outline: 2px solid grey;
+
 }
 .card-container{
     display: flex;
     max-width: 1400px;
     flex-wrap: wrap;
     margin: 0px auto;
+    
 }
+.project-tag{
+    margin: 2px;
+    
+}
+.projects-tags-button{
+  font: bold 14px/1 sans-serif;
+  color: white;
+  
+  padding: 5px;
+  background-color: rgb(68, 48, 248);
+  cursor: pointer;
+}
+.projects-tags-ul{
+    padding-inline-start: 0px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+.card-text{
+    font-size: medium;
+}
+@keyframes fade-in {
+    0% {
+        transform: translateY(200px);
+      opacity: 0;}
+    100% {   
+        transform: translateY(0px);
+      opacity: 1;}
+    }

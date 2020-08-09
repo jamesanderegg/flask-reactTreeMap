@@ -18,7 +18,7 @@ const Landing = (
           </p>
         </div>
       </div>
-      <h5 style={{ textAlign: "center" }}>Click anywhere to enter!</h5>
+      <h3 style={{ margin: "20px" }}>Click anywhere to enter!</h3>
     </div>
     <WhatIDo />
 

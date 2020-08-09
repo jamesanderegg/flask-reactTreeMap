@@ -1,31 +1,27 @@
 import React, { useState, useEffect } from "react";
 import projects from "./projectsMap";
 import Tags from "./Tags/Tags";
-import ProjectCard from "./ProjectCard/ProjectCard"
+import ProjectCard from "./ProjectCard/ProjectCard";
 const Projects = () => {
   const _ = require("lodash");
   const [tagProject, setTagProject] = useState("");
 
-//   let projectList = [];
+  //   let projectList = [];
   const registerTag = (e) => {
     setTagProject(e.target.id);
   };
 
   let tags = [];
-  let projectsList = []
+  let projectsList = [];
   _.each(projects, (edge) => {
-      
     if (_.get(edge, "tags")) {
       tags = tags.concat(edge.tags.split(", "));
 
-      if(edge.tags.includes(tagProject)){
-          
+      if (edge.tags.includes(tagProject)) {
         projectsList = projectsList.concat(edge);
       }
     }
   });
-  
-  
 
   let tagCounts = {};
   tags.forEach((tag) => {
@@ -38,8 +34,7 @@ const Projects = () => {
   return (
     <>
       <Tags tags={tags} tagsCount={tagCounts} registerTag={registerTag} />
-    <ProjectCard projectList={projectsList} />
-
+      <ProjectCard projectList={projectsList} />
     </>
   );
 };
