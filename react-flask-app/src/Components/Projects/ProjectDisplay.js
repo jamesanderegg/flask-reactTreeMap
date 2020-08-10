@@ -1,9 +1,16 @@
 import React from "react";
-
-const ProjectDisplay = ({match}) => {
-    console.log(match)
+import {Link,Route, BrowserRouter as Router, withRouter 
+} from "react-router-dom";
+const ProjectDisplay = ({component, projectsList}) => {
+    
   return(
-      <h1>hello</h1>
+      <Router>
+        <div className="container">
+        {projectsList.map(sub => (
+                    <Route exact path={`/${sub.id}`} component={sub.component}  />
+                ))}
+        </div>
+      </Router> 
   )
 };
 

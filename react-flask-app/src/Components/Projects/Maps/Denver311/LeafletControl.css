@@ -1,0 +1,58 @@
+.container-leaf{
+    background-color:rgb(25, 25, 112, 0.7); 
+    margin:10pt;  
+    width:420px; 
+    color:rgb(218, 126, 14);          
+  }
+  #toggle-leaf {
+    display: none;
+    visibility: hidden;
+  }
+  #header-leaf{
+    text-align: left;
+  }
+  #label-leaf {
+    display: block;
+    padding: 0.5em;
+    text-align: center;
+  }
+  #label-leaf:hover {
+    color: #fff;
+  }
+  #label-leaf::before {
+    font-family: Consolas, monaco, monospace;
+    font-weight: bold;
+    font-size: 30px;
+    content: "+";
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    margin-right: 3px;
+    background: radial-gradient(ellipse at center, #CCC 50%, transparent 50%);
+  }
+  input{
+    width:75%;
+    height: 35px;
+    font-size: 24px;
+    margin: 10px;
+  }
+  #expand-leaf {
+    height: 0px;
+    overflow: hidden;
+    transition: height 0.5s;
+    background-color:rgb(25, 25, 112, 0.01);
+    color: #FFF;
+  }
+  #toggle-leaf:checked ~ #expand-leaf {
+    height: 450px;
+  }
+  #toggle-leaf:checked ~ #label-leaf::before {
+    content: "-";
+  }
+  button{
+    margin: 10px;
+    
+  }
+  #search-btn{
+    width: 25%;
+  }

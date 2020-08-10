@@ -41,18 +41,33 @@ const Projects = () => {
 
   tags = _.uniq(tags);
 
-
   return (
-    
     <Router>
-    {(loadedProject) ? projectsList.map((project) => {
-        return (
-          <Route exact path={`/${project.id}`} component={ProjectDisplay} key={project.id}/>
-        );
-      }) : (<><Tags tags={tags} tagsCount={tagCounts} registerTag={registerTag} />
-      <ProjectCard projectList={projectsList} setLoadedProject={registerProjectLoaded} /></>)}
-      
-      
+      {loadedProject ? (
+        projectsList.map((project) => {
+          return (
+            <Route
+              exact
+              path={`/${project.id}`}
+              component={() => (
+                <ProjectDisplay
+                  component={project.component}
+                  projectsList={projectsList}
+                />
+              )}
+              key={project.id}
+            />
+          );
+        })
+      ) : (
+        <>
+          <Tags tags={tags} tagsCount={tagCounts} registerTag={registerTag} />
+          <ProjectCard
+            projectList={projectsList}
+            setLoadedProject={registerProjectLoaded}
+          />
+        </>
+      )}
     </Router>
   );
 };

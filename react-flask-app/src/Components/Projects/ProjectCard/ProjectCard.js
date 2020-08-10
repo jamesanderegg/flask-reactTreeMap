@@ -15,10 +15,6 @@ const ProjectCard = ({ projectList, setLoadedProject }) => {
           <div className="card-body">
             <h5 className="card-title">{project.name}</h5>
             <p className="card-text">{project.description}</p>
-            <Link to={`/${project.id}`} className="btn btn-primary" onClick={setLoadedProject}>Load {project.id}</Link>
-            {/* <a href="#" className="btn btn-primary">
-              Load {project.id} project
-            </a> */}
             <ul className="projects-tags-ul">
               {project.tags.split(",").map((tag) => {
                 return (
@@ -30,6 +26,11 @@ const ProjectCard = ({ projectList, setLoadedProject }) => {
                 );
               })}
             </ul>
+            <Link to={`/${project.id}`} className="btn btn-primary" onClick={setLoadedProject}>Load {project.id}</Link>
+            {/* <a href="#" className="btn btn-primary">
+              Load {project.id} project
+            </a> */}
+            
           </div>
         </div>
       ))}

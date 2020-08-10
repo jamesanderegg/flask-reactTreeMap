@@ -9,6 +9,7 @@
 //     image: "",
 //     text: "",
 // }
+import GoogleGps from './Maps/GoogleGps'
 
 const projects = [
     {
@@ -25,7 +26,7 @@ const projects = [
         name: 'My GPS Data',
         id: 'gpsGoogle',
         description: "A Heatmap of my GPS data over the last few years.",
-        component: "GoogleGps",
+        component: GoogleGps,
         url: 'https://leafletjs.com/',
         tags: "javascript, data, leaflet, heatmap, d3, map",
         image: 'http://localhost:3000/uploads/images/heatMap.png',
