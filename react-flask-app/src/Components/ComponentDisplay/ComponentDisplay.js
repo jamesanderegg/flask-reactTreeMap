@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 
 // need to attach to node 1 if want to make work for entire page.
@@ -9,10 +9,8 @@ import React, { useState, useEffect } from "react";
 //     height: "100%",
 // }
 
-function ComponentDisplay(props) {
-  useEffect(() => {
-    // console.log("Component", props)
-  }, [props]);
+function ComponentDisplay({data}) {
+  
 
   return (
     <div
@@ -20,7 +18,7 @@ function ComponentDisplay(props) {
       style={{height: "100%"}}
     >
       {/* <h4>{props.data.name}</h4> */}
-      {props.data.component}
+      {data.component}
     </div>
   );
 } 

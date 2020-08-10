@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import pageData from './utilities/treeData'
 import './App.css';
-import Backdrop from './Components/Backdrop/Backdrop'
+
 import TreeMap from './Components/TreeMap/TreeMap'
 
 

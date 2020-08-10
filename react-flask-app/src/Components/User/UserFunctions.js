@@ -11,6 +11,7 @@ export const register = newUser => {
     })
     .then(response => {
       console.log('Registered' , response)
+      return response.data
     })
 }
 

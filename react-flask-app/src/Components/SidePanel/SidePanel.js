@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import "./SidePanel.css";
 import Login from "../User/Login";
 import Register from "../User/Register";
 import LoggedIn from "../User/LoggedIn"
-const SidePanel = (props) => {
-  const [userTokenId, setUserTokenId] = useState(null);
+const SidePanel = ({show, hidePanel, userId, setUserId}) => {
   const [registerOpen, setRegisterOpen] = useState(false);
 
   const registerClickHandler = () => {
@@ -16,19 +15,19 @@ const SidePanel = (props) => {
 
   let panelClasses = "side-panel";
 
-  if (props.show) {
+  if (show) {
     panelClasses = "side-panel open";
   }
   return (
     <div className={panelClasses}>
-      <div className="hidePanel" onClick={props.hidePanel}>
+      <div className="hidePanel" onClick={hidePanel}>
         {" "}
         &rarr; Hide Panel
       </div>
 
       {/* <div className="login-nav">Login </div> */}
 
-      {!props.userId ? (
+      {!userId ? (
         <>
           <div className="row" style={{ margin: "60px 10px 10px" }}>
             
@@ -51,14 +50,14 @@ const SidePanel = (props) => {
               <div className="signup-nav" onClick={registerClickHandler}>
               Sign Up
             </div>
-              <Login userId={props.userId} setUserId={props.setUserId} />
+              <Login userId={userId} setUserId={setUserId} />
               </>
             )}
             
           </div>
         </>
       ) : (
-        <LoggedIn userId={props.userId}/>
+        <LoggedIn userId={userId}/>
       )}
     </div>
   );

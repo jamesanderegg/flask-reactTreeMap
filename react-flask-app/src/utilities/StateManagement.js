@@ -28,7 +28,7 @@ function StateManagement(props) {
     //Make sure we have click Data to see what we will render
     if (props.clickData) {
       // console.log(props.clickData.height)
-      if (props.clickData.id == "datafluent") {
+      if (props.clickData.id === "datafluent") {
         newNode = document.getElementById(props.clickData.id);
         ReactDOM.render(
           <React.StrictMode>
@@ -36,11 +36,11 @@ function StateManagement(props) {
           </React.StrictMode>,
           newNode
         );
-      } else if (props.clickData.height == 1) {
+      } else if (props.clickData.height === 1) {
         // ABOUT ME
         newNode = document.getElementById(props.clickData.data.children[0].id);
 
-        if (newNode.id == "about") {
+        if (newNode.id === "about") {
           ReactDOM.render(
             <React.StrictMode>
               <ComponentDisplay
@@ -51,7 +51,7 @@ function StateManagement(props) {
           );
           setNode(newNode);
         }
-        if (newNode.id == "projects") {
+        if (newNode.id === "projects") {
           ReactDOM.render(
             <React.StrictMode>
               <ComponentDisplay

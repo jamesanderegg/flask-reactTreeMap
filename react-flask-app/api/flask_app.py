@@ -101,6 +101,8 @@ def register():
             # add the new user to the database
             db.session.add(new_user)
             db.session.commit()
+        else:
+            return jsonify(300)
     #we have to return something.
     return jsonify(200)
 

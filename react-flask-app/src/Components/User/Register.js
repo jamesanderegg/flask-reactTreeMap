@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import { register, validate } from './UserFunctions';
 
 
-const Register = (props) => {
+const Register = ({registerClickHandler}) => {
     const [firstName, setFirstName]=useState('')
     const [lastName, setLastName]=useState('')
     const [email, setEmail]=useState('')
@@ -32,7 +32,7 @@ const Register = (props) => {
     useEffect(() => {
         if(user){
             register(user).then(res => {
-                if(res){
+                if(res === 300){
                     let errors = []
                     errors.push('Could not register at this time. Please try again.')
                     setFirstName('')
@@ -41,13 +41,14 @@ const Register = (props) => {
                     setPassword('')
                     setRePassword('')
                     setErrors(errors)
-                }else(
-                    
-                    props.registerClickHandler()
+                    setUser(null)
+                    return
+                }else(  
+                    registerClickHandler()
                 )
             })
         }
-    }, [user])
+    }, [user, registerClickHandler])
 
     return(
         <div className="container">

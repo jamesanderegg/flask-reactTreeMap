@@ -1,11 +1,21 @@
 import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+
 import projects from "./projectsMap";
 import Tags from "./Tags/Tags";
 import ProjectCard from "./ProjectCard/ProjectCard";
+import ProjectDisplay from "./ProjectDisplay";
+
 const Projects = () => {
   const _ = require("lodash");
   const [tagProject, setTagProject] = useState("");
+  const [loadedProject, setLoadedProject] = useState(false);
 
+  const registerProjectLoaded = (e) => {
+    setLoadedProject((prevState) => {
+      return !prevState;
+    });
+  };
   //   let projectList = [];
   const registerTag = (e) => {
     setTagProject(e.target.id);
@@ -31,11 +41,19 @@ const Projects = () => {
 
   tags = _.uniq(tags);
 
+
   return (
-    <>
-      <Tags tags={tags} tagsCount={tagCounts} registerTag={registerTag} />
-      <ProjectCard projectList={projectsList} />
-    </>
+    
+    <Router>
+    {(loadedProject) ? projectsList.map((project) => {
+        return (
+          <Route exact path={`/${project.id}`} component={ProjectDisplay} key={project.id}/>
+        );
+      }) : (<><Tags tags={tags} tagsCount={tagCounts} registerTag={registerTag} />
+      <ProjectCard projectList={projectsList} setLoadedProject={registerProjectLoaded} /></>)}
+      
+      
+    </Router>
   );
 };
 

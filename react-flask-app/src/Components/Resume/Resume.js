@@ -35,6 +35,7 @@ function Resume() {
           className="github-button"
           href="https://github.com/jamesanderegg"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <i className="fab fa-github fa-2x"></i>
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import * as d3 from "d3";
 import StateManagment from "../../utilities/StateManagement";
-import Resume from '../Resume/Resume'
+
 import "./zoom.css";
 
 function TreeMap(props) {
@@ -25,7 +25,7 @@ function TreeMap(props) {
           .treemap()
           .size([width, height])
           //.tile(d3.treemapResquarify) // doesn't work - height & width is 100%
-          .paddingInner(.4)
+          .paddingInner(0.4)
           .round(false);
       var data;
 
@@ -77,23 +77,22 @@ function TreeMap(props) {
           return color(d.data.name);
         })
         .on("click", function (d) {
-          if(d.data.name !== 'Resume'){
+          if (d.data.name !== "Resume") {
             return d.depth < 3 ? zoom(d) : null;
           }
         });
 
-        // THIS IS HOW D3 APPENDS THE TEXT.
+      // THIS IS HOW D3 APPENDS THE TEXT.
 
       Cells.append("h3")
         .attr("class", "label")
         .text(function (d) {
           //Resume Component needs to be rendered so we leave it out.
-          if(d.data.name != "Resume"){
+          if (d.data.name !== "Resume") {
             return d.data.name ? d.data.name : "---";
           }
-          
         });
-      
+
       // Cells.append("p").attr("class", "text").text(function(d) {
       //     return d.data.displayText ? d.data.displayText : "---";
       // });
@@ -118,7 +117,7 @@ function TreeMap(props) {
 
         var t = d3.transition().duration(800).ease(d3.easeCubicOut);
         //control zoom only on the left side for resumeMap
-        if (d.data.id == "resumeMap") {
+        if (d.data.id === "resumeMap") {
           Cells.transition(t)
             .style("left", function (d) {
               return x(d.x0) + 60 + "%";
@@ -132,17 +131,17 @@ function TreeMap(props) {
             .style("height", function (d) {
               return y(d.y1) - y(d.y0) + "%";
             });
-            Cells.filter(function (d) {
-              // hide this depth and above
-              return d.ancestors();
-            }).classed("hide", function (d) {
-              return d.children ? true : false;
-            });
-    
-            // Cells.filter(function (d) {
-            //   // show this depth + 1 and below
-            //   return d.depth > currentDepth;
-            // }).classed("hide", false);
+          Cells.filter(function (d) {
+            // hide this depth and above
+            return d.ancestors();
+          }).classed("hide", function (d) {
+            return d.children ? true : false;
+          });
+
+          // Cells.filter(function (d) {
+          //   // show this depth + 1 and below
+          //   return d.depth > currentDepth;
+          // }).classed("hide", false);
 
           return;
         }
