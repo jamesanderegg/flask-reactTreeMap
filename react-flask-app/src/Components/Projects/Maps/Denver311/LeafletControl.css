@@ -1,7 +1,7 @@
 .container-leaf{
     background-color:rgb(25, 25, 112, 0.7); 
     margin:10pt;  
-    width:420px; 
+    width:90%; 
     color:rgb(218, 126, 14);          
   }
   #toggle-leaf {

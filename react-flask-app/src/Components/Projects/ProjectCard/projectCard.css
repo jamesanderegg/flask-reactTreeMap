@@ -11,6 +11,10 @@
     outline: 2px solid grey;
 
 }
+.card-title{
+    text-align: center;
+    width: 90%;
+}
 .card-container{
     display: flex;
     max-width: 1400px;
@@ -29,6 +33,15 @@
   padding: 5px;
   background-color: rgb(68, 48, 248);
   cursor: pointer;
+}
+.load-button{
+    font: bold 22px/1 sans-serif;
+    color: white;
+    
+    padding: 5px;
+    background-color: rgb(68, 48, 248);
+    cursor: pointer;
+    
 }
 .projects-tags-ul{
     padding-inline-start: 0px;

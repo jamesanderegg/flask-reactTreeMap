@@ -13,11 +13,11 @@ import styled from 'styled-components';
 const API_KEY = "pk.eyJ1IjoianVpY3lqYW1lcyIsImEiOiJjazFzbXY3djcwaHI2M21xMnBub2c3d3JvIn0.nVANyOFAxNMCjO598ZACIg";
 
 const Wrapper = styled.div`
-    width: ${props => props.width};
+    width: 100%;
     height: ${props => props.height};
     z-index: 3
     margin: 0 auto;
-    min-width: 450px;
+    min-width: 300px;
 `;
 
 
@@ -135,7 +135,7 @@ export default class Map extends React.Component {
 
     render(){    
         
-        return <Wrapper width="80%" height="720px" id="map" >
+        return <Wrapper width="100%" height="720px" id="map" >
             <LeafletControl onSubmit={this.onSubmit} onChange={this.onChange} searchbox={this.state.searchbox}/>
         </Wrapper>
         

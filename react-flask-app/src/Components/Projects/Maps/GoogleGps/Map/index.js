@@ -1,20 +1,19 @@
 import React from 'react';
 import * as L from 'leaflet';
+
 import 'leaflet/dist/leaflet.css';
 import 'leaflet-spin'
 import 'leaflet.heat'
-
-
 
 import styled from 'styled-components';
 import * as d3 from "d3";
 
 const Wrapper = styled.div`
-    width: ${props => props.width};
+    width: 100%;
     height: ${props => props.height};
     z-index: 3
     margin: 0 auto;
-    min-width: 450px;
+    min-width: 300px;
 `;
 
 export default class Map extends React.Component {

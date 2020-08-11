@@ -53,6 +53,7 @@ const Projects = () => {
                 <ProjectDisplay
                   component={project.component}
                   projectsList={projectsList}
+                  registerProjectLoaded={registerProjectLoaded}
                 />
               )}
               key={project.id}

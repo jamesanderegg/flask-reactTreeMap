@@ -10,6 +10,7 @@
 //     text: "",
 // }
 import GoogleGps from './Maps/GoogleGps'
+import Denver311 from './Maps/Denver311'
 
 const projects = [
     {
@@ -36,7 +37,7 @@ const projects = [
         name: '2016 Denver 311 Phone Call Data',
         id: 'denver311',
         description: "A map of Denvers phone information hotline, 311, for the year 2016",
-        component: "Denver311",
+        component: Denver311,
         url: '',
         tags: "javascript, data, leaflet, heatmap, d3, denver, css, map",
         image: 'http://localhost:3000/uploads/images/denver311.png',
@@ -68,8 +69,8 @@ const projects = [
         description: "A website I built for a client in React with Gatsby.",
         component: "SNOC",
         url: 'https://github.com/jamesanderegg/schoolofnaturalordercolorado',
-        tags: "react, gatsby, html, css, website, parallax, javascript, github,",
-        image: '',
+        tags: "react, gatsby, html, css, website, javascript, github, design",
+        image: 'http://localhost:3000/uploads/images/snoc.png',
         text: "A website for the School of the Natural Order."
     }
 ]

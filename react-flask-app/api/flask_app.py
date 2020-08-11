@@ -1,7 +1,8 @@
 
 from flask import Flask, request, jsonify, send_from_directory, abort
 from flask_sqlalchemy import SQLAlchemy
-
+import pandas as pd
+import json
 import sqlalchemy
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine
@@ -16,6 +17,60 @@ app = Flask(__name__, static_folder="../build", static_url_path='/')
 app.config["SQLALCHEMY_DATABASE_URI"] = 'sqlite:///site.db'
 #Initiat Database
 db = SQLAlchemy(app)
+
+
+class Denver_311(db.Model):
+    __tablename__ = "denver"
+    pkey = db.Column(db.Integer, primary_key=True)
+    summary = db.Column(db.String(4096))
+    source = db.Column(db.String(256))
+    agency = db.Column(db.String(256))
+    date = db.Column(db.String(24))
+    longitude = db.Column(db.Float)
+    latitude = db.Column(db.Float)
+
+    def __repr__(self):
+        return f"gps_locations('{self.latitude}','{self.longitude}')"
+
+
+def df_to_geojson(merged_df, lat='latitude', lon='longitude'):
+
+    geojson = {'type': 'FeatureCollection', 'features': []}
+
+    # loop through each row in the dataframe and convert each row to geojson format
+    for _, row in merged_df.iterrows():
+
+        # create a feature template to fill in
+        feature = {'type': 'Feature',
+                   'properties': {
+                       'Agency': '',
+                       'Case Summary': '',
+                       'Case Source': '',
+                       'Case Date': ''
+                   },
+                   'geometry': {'type': 'Point',
+                                'coordinates': []}}
+
+        # fill in the coordinates
+        feature['geometry']['coordinates'] = [row[lon], row[lat]]
+        feature['properties']['Agency'] = row['agency']
+        feature['properties']['Case Summary'] = row['summary']
+        feature['properties']['Case Source'] = row['source']
+        feature['properties']['Case Date'] = row['date']
+        # for each column, get the value and add it as a new feature property
+        # for prop in properties:
+        #     feature['properties'][prop] = row[prop]
+
+        # add this feature (aka, converted dataframe row) to the list of features inside our dict
+        geojson['features'].append(feature)
+
+    return geojson
+
+
+class Gps_locations(db.Model):
+    __tablename__ = "gps_locations"
+    latitude = db.Column(db.Float, primary_key=True)
+    longitude = db.Column(db.Float, nullable=False)
 
 #Query the DB directly with the User Object
 class User(db.Model):
@@ -114,7 +169,42 @@ def uploads(filename):
         
         # abort(404)
         return jsonify(300)
+@app.route('/google_data', methods=["GET"])
+def google_data():
+    empDict = {'latitude': [],
+               'longitude': []}
 
+    result = Gps_locations.query.all()
+    for row in result:
+        empDict['latitude'].append(row.latitude)
+        empDict['longitude'].append(row.longitude)
+
+    return jsonify(empDict)
+@app.route('/denver311')
+def denver311():
+
+    data = {
+        "summary": [],
+        "source": [],
+        "agency": [],
+        "date": [],
+        "longitude": [],
+        "latitude": []
+    }
+    result = Denver_311.query.all()
+
+    for row in result:
+        data['summary'].append(row.summary)
+        data['source'].append(row.source)
+        data['agency'].append(row.agency)
+        data['date'].append(row.date)
+        data['longitude'].append(row.longitude)
+        data['latitude'].append(row.latitude)
+    df = pd.DataFrame.from_dict(data)
+    geojson_dict = df_to_geojson(df)
+    geojson_str = json.dumps(geojson_dict, indent=2)
+
+    return geojson_str
 
 if __name__ == '__main__':
     app.run(port=5000,debug=True) 
