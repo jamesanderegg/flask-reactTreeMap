@@ -69,7 +69,7 @@ const projects = [
         text: "Use the arrow keys on your keyboard to play."
     },
     {
-        name: 'The School of the Natural Order',
+        name: 'Gatsby Static Website',
         id: 'snoc',
         description: "A website I built for a client in React with Gatsby.",
         component: "SNOC",

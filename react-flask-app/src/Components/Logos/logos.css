@@ -1,0 +1,21 @@
+.logos-ul{
+    list-style: none;
+    font-size: 45px;
+}
+.logos-li{
+    text-align: start;
+}
+.logos-image{
+    float: left;
+    width: 11%;
+    height:auto;
+}
+.python{
+    color: rgb(255, 232, 115);
+}
+.javascript{
+    color: rgb(50, 51, 48);
+}
+.react{
+    color: rgb(97, 219, 251)
+}

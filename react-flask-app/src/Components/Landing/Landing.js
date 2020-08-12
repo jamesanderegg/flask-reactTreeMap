@@ -2,6 +2,7 @@ import React from "react";
 import RandoBarChart from "../RandoBarChart";
 import "./Landing.css";
 import WhatIDo from '../WhatIDo/WhatIdo'
+import Logos from '../Logos/Logos'
 const Landing = (
   <div className="container">
     <div className="jumbotron mt-5 jumbo">
@@ -18,7 +19,12 @@ const Landing = (
           </p>
         </div>
       </div>
-      <h3 style={{ margin: "20px" }}>Click anywhere to enter!</h3>
+      <div className="row landing-logos-row">
+      <div className="col-lg landing-enter-col"><h3 style={{ margin: "20px" }}>Click anywhere to enter!</h3></div>
+        <div className="col landing-logos-col"><Logos /></div>
+      </div>
+      
+      
     </div>
     <WhatIDo />
 

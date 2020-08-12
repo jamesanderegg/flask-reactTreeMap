@@ -12,9 +12,16 @@
     border: 2px solid black;
     margin:  4px 13px;
     padding-top: 5px;
-    width: 240px;
-    
-    
+    width: 240px; 
+}
+.landing-logos-row{
+    margin: 0px auto;
+}
+.landing-logos-col{
+    margin: 0 30px;
+}
+.landing-enter-col{
+    margin: 50px 0px;
 }
 .layout-p{
     font-size: medium;
