@@ -9,11 +9,13 @@ import styled from 'styled-components';
 import * as d3 from "d3";
 
 const Wrapper = styled.div`
-    width: 100%;
+    width: 85%;
     height: ${props => props.height};
     z-index: 3
     margin: 0 auto;
     min-width: 300px;
+    left: 50%;
+    transform: translateX(-50%);
 `;
 
 export default class Map extends React.Component {

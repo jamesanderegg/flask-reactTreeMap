@@ -42,16 +42,17 @@ const Projects = () => {
   tags = _.uniq(tags);
 
   return (
+    
     <Router>
       {loadedProject ? (
         projectsList.map((project) => {
           return (
+           
             <Route
               exact
               path={`/${project.id}`}
               component={() => (
                 <ProjectDisplay
-                  component={project.component}
                   projectsList={projectsList}
                   registerProjectLoaded={registerProjectLoaded}
                 />
@@ -69,6 +70,7 @@ const Projects = () => {
           />
         </>
       )}
+      
     </Router>
   );
 };

@@ -13,11 +13,13 @@ import styled from 'styled-components';
 const API_KEY = "pk.eyJ1IjoianVpY3lqYW1lcyIsImEiOiJjazFzbXY3djcwaHI2M21xMnBub2c3d3JvIn0.nVANyOFAxNMCjO598ZACIg";
 
 const Wrapper = styled.div`
-    width: 100%;
+    width: 90%;
     height: ${props => props.height};
     z-index: 3
     margin: 0 auto;
     min-width: 300px;
+    left: 50%;
+    transform: translateX(-50%);
 `;
 
 

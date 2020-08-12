@@ -3,7 +3,7 @@ import {Link,Route, BrowserRouter as Router, withRouter
 } from "react-router-dom";
 import './projectsDisplay.css'
 import GoBack from '../../utilities/GoBack'
-const ProjectDisplay = ({component, projectsList, registerProjectLoaded}) => {
+const ProjectDisplay = ({ projectsList, registerProjectLoaded}) => {
     
   return(
       <Router>
