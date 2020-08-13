@@ -21,40 +21,43 @@ function Resume() {
       .catch((error) => {
         console.log(error);
       });
-      
   };
   return (
     <div className="resume-ul">
       <div className="resume-div" onClick={getResume}>
-        {" "}
+        <div className="resume-button">
         <i className="far fa-file fa-2x resume-button"></i>
         <h5>My Resume</h5>
+        </div>
       </div>
-      <div className="resume-div">
-        <a
-          className="github-button"
-          href="https://github.com/jamesanderegg"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+      <div className="resume-div" >
+        <div
+          className="github-button" onClick={e => window.open("https://github.com/jamesanderegg")}>
+          
           <i className="fab fa-github fa-2x"></i>
 
           <h5>GitHub</h5>
-        </a>
+        </div>
       </div>
-
-      <div className="resume-div" onMouseEnter={() => setTextHidden(true)}
-          onMouseLeave={() => setTextHidden(false)}
-          onClick={() =>navigator.clipboard.writeText('jamesanderegg@jamesanderegg.com')}>
-          <p className="copy-clip">Click to copy Email</p>
+      <div
+        className="resume-div"
+        onMouseEnter={() => setTextHidden(true)}
+        onMouseLeave={() => setTextHidden(false)}
+        onClick={() =>
+          navigator.clipboard.writeText("jamesanderegg@jamesanderegg.com")
+        }
+      >
+      <div className="email-button">
         <i className="fas fa-at fa-2x"></i>
-        <h5
-          
-        >
-          Email
-        </h5>
-        {textHidden && <>
-        <p className="copy-email">jamesanderegg@jamesanderegg.com</p></>}
+        <h5>Email</h5>
+        <h6>Click to copy to clipboard</h6>
+        
+        {textHidden && (
+          <>
+            <p className="copy-email">jamesanderegg@jamesanderegg.com</p>
+          </>
+        )}
+      </div>
       </div>
     </div>
   );

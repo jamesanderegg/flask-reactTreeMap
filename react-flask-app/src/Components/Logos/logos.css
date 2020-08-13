@@ -1,9 +1,14 @@
 .logos-ul{
     list-style: none;
     font-size: 35px;
+    margin: 20px auto 0;
+    width: 80%;
+    padding-inline-start: 15px;
+    
 }
 .logos-li{
     text-align: start;
+    
 }
 .logos-image{
     float: left;

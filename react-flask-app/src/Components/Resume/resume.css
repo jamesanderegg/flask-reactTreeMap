@@ -5,22 +5,22 @@
 .resume-div{
     margin: 70px 0;
     
- 
-}
-.github-button{
-    color:white
-}
-.resume-div{
-    color: white;
-}
-.github-button :hover{
-    color: rgb(204, 204, 83);
-    text-decoration: none;
 }
 .resume-div :hover{
     color: rgb(204, 179, 179);
     cursor: pointer;
+    
+    
 }
+.github-button{
+    color:white;
+}
+
+.resume-div{
+    color: white;
+}
+
+
 .copy-clip{
     color: rgb(214, 214, 214);
     font-size: 14px;
@@ -29,10 +29,10 @@
     
 }
 .copy-email{
-    font-weight: bold;
     
-    font-size: 10px;
-    max-width: 150px;
+    
+    font-size: 16px;
+    max-width: 90%;
     margin: auto;
     word-break: break-all;
 }

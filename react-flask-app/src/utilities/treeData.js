@@ -17,7 +17,7 @@ const pageData = [
         component: Landing,
         children: [
           {
-            name: "About me",
+            name: "ABOUT ME",
             displayText: null,
             id: "aboutMap",
             component: <About />,
@@ -26,7 +26,7 @@ const pageData = [
             ],
           },
           {
-            name: "My Work",
+            name: "MY WORK",
             id: "projectsMap",
             component: <Projects />,
             children: [

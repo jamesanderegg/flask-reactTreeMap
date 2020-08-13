@@ -20,8 +20,8 @@ const Landing = (
         </div>
       </div>
       <div className="row landing-logos-row">
-      <div className="col-lg landing-enter-col"><h3 style={{ margin: "20px" }}>Click anywhere to enter!</h3></div>
-        <div className="col landing-logos-col"><Logos /></div>
+      <div className="col-md-5 mx-auto landing-enter-col"><h3 style={{ margin: "20px" }}>Click anywhere to enter!</h3></div>
+        <div className="col-lg-7 mx-auto landing-logos-col"><Logos /></div>
       </div>
       
       
