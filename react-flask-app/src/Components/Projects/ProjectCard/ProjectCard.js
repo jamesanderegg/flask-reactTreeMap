@@ -1,9 +1,13 @@
 import React from "react";
 import { Link, Route } from "react-router-dom";
 import "./projectCard.css";
+import ScrollLock, { TouchScrollable } from 'react-scrolllock';
+
 const ProjectCard = ({ projectList, setLoadedProject }) => {
+
+  
   return (
-    <div className="gallery">
+    <div className="gallery" >
       {projectList.map((project) => (
         <div className="card-container" key={project.id}>
           <input type="checkbox" id={project.id} />

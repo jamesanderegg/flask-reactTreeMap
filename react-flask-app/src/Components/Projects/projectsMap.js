@@ -53,7 +53,7 @@ const projects = [
         component: "WorldSeries",
         website: null,
         url: 'https://github.com/jamesanderegg/part3_barchartTransitions',
-        tags: "d3, web scraping, javascript, css",
+        tags: "d3, web scraping, javascript, css, python, pandas",
         image: 'http://localhost:3000/uploads/images/worldSeries.png',
         text: "I followed Swizecs tutorial on how to build Moores Law with d3 animations and this is my own interpertaion with MLB stats."
     },
@@ -77,6 +77,17 @@ const projects = [
         url: 'https://github.com/jamesanderegg/schoolofnaturalordercolorado',
         tags: "react, gatsby, html, css, website, javascript",
         image: 'http://localhost:3000/uploads/images/snoc.png',
+        text: "A website for the School of the Natural Order of Coloradoo."
+    },
+    {
+        name: 'Denver Police Officer-Involved Shootings',
+        id: 'denver-dashboard',
+        description: "A dashboard of officer involved shootings, built in Power Bi with Data from Denver Open Data Catalog",
+        component: "SNOC",
+        website: 'https://www.denvergov.org/opendata/search?q=Police',
+        url: null,
+        tags: "python, pandas, power-bi, data-analyst",
+        image: null,
         text: "A website for the School of the Natural Order of Coloradoo."
     }
 ]

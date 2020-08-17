@@ -4,10 +4,10 @@ import {Link,Route, BrowserRouter as Router, withRouter
 import './projectsDisplay.css'
 import GoBack from '../../utilities/GoBack'
 const ProjectDisplay = ({ projectsList, registerProjectLoaded}) => {
-    
+  
   return(
       <Router>
-        <div className="display-container">
+        <div className="display-container" >
           <GoBack registerProjectLoaded={registerProjectLoaded}/>
         {projectsList.map(sub => (
                     <Route exact path={`/${sub.id}`} component={sub.component} key={sub.id}  />
