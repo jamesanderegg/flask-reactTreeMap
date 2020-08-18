@@ -8,7 +8,7 @@
 //     url: 'https://github.com/jamesanderegg/react_tetris',
 //     urlText: 'Github',
 //     tags: "game, hooks, tutorial",
-//     image: 'http://localhost:3000/uploads/images/tetris.png',
+//     image: 'http://localhost:5000/uploads/images/tetris.png',
 //     text: "Use the arrow keys on your keyboard to play."
 // },{
 //     name: 'The Classic Game: Snake',
@@ -20,7 +20,7 @@
 //     url: 'https://github.com/jamesanderegg/react_snake',
 //     urlText: 'Github',
 //     tags: "game, react, javascript, tutorial",
-//     image: 'http://localhost:3000/uploads/images/python.png',
+//     image: 'http://localhost:5000/uploads/images/python.png',
 //     text: "Use the arrows on your keyboard to move the snake.  Eat red apples to grow."
 // },{
 //     name: 'MLB: On Base Percentage',
@@ -32,7 +32,7 @@
 //     url: 'https://github.com/jamesanderegg/d3_animatedBarChartContinued',
 //     urlText: 'Github',
 //     tags: "d3, web scraping, javascript, python, pandas",
-//     image: 'http://localhost:3000/uploads/images/worldSeries.png',
+//     image: 'http://localhost:5000/uploads/images/worldSeries.png',
 //     text: "I followed Swizecs tutorial on how to build Moores Law with d3 animations and this is my own interpertaion with MLB stats."
 // },
 import GoogleGps from './Maps/GoogleGps'
@@ -50,7 +50,7 @@ const projects = [
         url: 'https://leafletjs.com/',
         urlText: 'Leaflet',
         tags: "javascript, data, heatmap, d3, map",
-        image: 'http://localhost:3000/uploads/images/heatMap.png',
+        image: 'http://localhost:5000/uploads/images/heatMap.png',
         text: "I downloaded my GPS data from google and used Leaflet JS to map it.  I also used a heatmap and loading spinner librarys.  It's pulling over 1 million rows from my database so please give it time to load.  "
     },
     {
@@ -63,7 +63,7 @@ const projects = [
         url: 'https://github.com/jamesanderegg/flask-reactTreeMap/tree/master/react-flask-app/src/Components/Projects/Maps/Denver311',
         urlText: 'Github',
         tags: "javascript, data, heatmap, d3, denver, map",
-        image: 'http://localhost:3000/uploads/images/denver311.png',
+        image: 'http://localhost:5000/uploads/images/denver311.png',
         text: "Denver has an open data city catalog with lots of datasets.  This is the information hotline, sorted by complaints for the year 2016.  I've made the data searchable."
     },
     {
@@ -76,7 +76,7 @@ const projects = [
         url: 'https://github.com/jamesanderegg/schoolofnaturalordercolorado',
         urlText: 'Github',
         tags: "react, gatsby, website, javascript",
-        image: 'http://localhost:3000/uploads/images/snoc.png',
+        image: 'http://localhost:5000/uploads/images/snoc.png',
         text: "A website for the School of the Natural Order of Colorado."
     },
     {
@@ -89,7 +89,7 @@ const projects = [
         url: 'https://www.denvergov.org/opendata/dataset/city-and-county-of-denver-denver-police-officer-involved-shootings',
         urlText: 'Denver Open Data',
         tags: "power-bi, data-analyst, dashboard, denver",
-        image: 'http://localhost:3000/uploads/images/treemap-police.png',
+        image: 'http://localhost:5000/uploads/images/treemap-police.png',
         text: "A website for the School of the Natural Order of Coloradoo."
     }
 ]

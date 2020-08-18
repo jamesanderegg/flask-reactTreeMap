@@ -164,7 +164,7 @@ def register():
 @app.route("/uploads/<path:filename>", methods=['GET'])
 def uploads(filename):
     try:
-        return send_from_directory(directory='/uploads', filename=filename, as_attachment=True)
+        return send_from_directory(directory='../build/uploads', filename=filename, as_attachment=True)
     except FileNotFoundError:
         
         # abort(404)
