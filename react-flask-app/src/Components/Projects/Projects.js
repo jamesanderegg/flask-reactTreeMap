@@ -40,14 +40,12 @@ const Projects = () => {
   });
 
   tags = _.uniq(tags);
-  
+
   return (
-    
     <Router>
       {loadedProject ? (
         projectsList.map((project) => {
           return (
-           
             <Route
               exact
               path={`/${project.id}`}
@@ -70,7 +68,7 @@ const Projects = () => {
           />
         </>
       )}
-      <iframe width="800" height="836" src="https://app.powerbi.com/view?r=eyJrIjoiZjRiMDA5ZmYtYzk2ZS00OTIzLTg5MjAtMjg4OTRlMTQ1ZGRkIiwidCI6Ijc5YTUxMDViLTcyMTUtNDg5My1hY2E2LTlhZTQxMTQ2M2ZkOSIsImMiOjZ9&pageName=ReportSection" frameborder="0" allowFullScreen="true"></iframe>
+      
     </Router>
   );
 };
