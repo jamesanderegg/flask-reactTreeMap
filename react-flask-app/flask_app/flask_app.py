@@ -13,6 +13,20 @@ from datetime import datetime
 
 app = Flask(__name__, static_folder="../build", static_url_path='/')
 
+# username="juicyjames"
+# password="hju87ijpolispoeal23"
+# hostname="juicyjames.mysql.pythonanywhere-services.com"
+# databasename="juicyjames$website_db"
+# SQLALCHEMY_DATABASE_URI = f"mysql+mysqlconnector://{username}:{password}@{hostname}/{databasename}"
+
+# #uri database location
+# app.config["SQLALCHEMY_DATABASE_URI"] = SQLALCHEMY_DATABASE_URI
+# app.config["SQLALCHEMY_POOL_RECYCLE"] = 299
+# app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+# app.secret_key = "something only you know"
+
+# LOCAL DB
+
 # LOCAL DB
 app.config["SQLALCHEMY_DATABASE_URI"] = 'sqlite:///site.db'
 #Initiat Database
@@ -205,6 +219,10 @@ def denver311():
     geojson_str = json.dumps(geojson_dict, indent=2)
 
     return geojson_str
-
-if __name__ == '__main__':
-    app.run(port=5000,debug=True) 
+    
+if __name__ == "__main__":
+    app.secret_key = 'super secret key'
+    app.config['_session_TYPE'] = 'filesystem'
+    app.run(debug=True)
+# if __name__ == '__main__':
+#     app.run(port=5000,debug=True) 
