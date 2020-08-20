@@ -223,6 +223,4 @@ def denver311():
 if __name__ == "__main__":
     app.secret_key = 'super secret key'
     app.config['_session_TYPE'] = 'filesystem'
-    app.run(debug=True)
-# if __name__ == '__main__':
-#     app.run(port=5000,debug=True) 
+    app.run(port=5000,debug=True)

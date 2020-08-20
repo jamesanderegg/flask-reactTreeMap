@@ -76,21 +76,21 @@ nav .login:hover {
   cursor: default;
 }
 #aboutMap{
-  background-image: url("http://localhost:5000/uploads/images/wireframe-all.png");
+  background-image: url("https://www.jamesanderegg.com/uploads/images/wireframe-all.png");
   background-size: 100% 100%;
   background-attachment: fixed;
   background-position: bottom left;
   background-repeat: no-repeat
 }
 #projectsMap{
-  background-image: url("http://localhost:5000/uploads/images/wireframe-all.png");
+  background-image: url("https://www.jamesanderegg.com/uploads/images/wireframe-all.png");
   background-size: 100% 100%;
   background-attachment: fixed;
   background-position: bottom left;
   background-repeat: no-repeat
 }
 #resumeMap{
-  background-image: url("http://localhost:5000/uploads/images/wireframe-all.png");
+  background-image: url("https://www.jamesanderegg.com/uploads/images/wireframe-all.png");
   background-size: 100% 100%;
   background-attachment: fixed;
   background-position: bottom left;
