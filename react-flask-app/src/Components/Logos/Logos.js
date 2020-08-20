@@ -16,7 +16,7 @@ const Logos = () => {
       <li className="logos-li">
         <img
           className="logos-image"
-          src="http://localhost:5000/uploads/images/power-bi.png"
+          src="https://jamesanderegg/uploads/images/power-bi.png"
           alt="Microsoft Power Bi"
         ></img>{" "}
         Power Bi
