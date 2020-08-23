@@ -39,6 +39,7 @@ nav .login {
   color: white;
   width: 150px;
   padding: 8px;
+  margin-right: 10px;
   background-color: rgba(230, 26, 60, 0.8);
   float: right;
   cursor: pointer;

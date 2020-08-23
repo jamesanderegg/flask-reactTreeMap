@@ -17,15 +17,15 @@
     width: 240px; 
 }
 .landing-logos-row{
-    margin: 0px auto;
-}
-.landing-logos-col{
-    width: 100%;
-    margin: auto;
-}
-.landing-enter-col{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    
     width: 90%;
-    margin: auto;
+   margin: 0 auto;
+}
+.landing-logos-row h3{
+    margin-left: 10%;
 }
 .layout-p{
     font-size: medium;

@@ -62,9 +62,6 @@ const WhatIDo = () => {
           React front-end with a MySQL database. I used a D3 treemap for the
           layout.
         </h6>
-        <h6 className="bottom-h6">
-          Check out my projects!
-        </h6>
       </div>
     
   );

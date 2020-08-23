@@ -3,7 +3,8 @@ import "./resume.css";
 import axios from "axios";
 
 function Resume() {
-  const [textHidden, setTextHidden] = useState(false);
+  const [textEmailHidden, setEmailTextHidden] = useState(false);
+  const [textResumeHidden, setResumeTextHidden] = useState(false);
 
   const getResume = () => {
     return axios
@@ -24,12 +25,21 @@ function Resume() {
   };
   return (
     <div className="resume-ul">
-      <div className="resume-div" onClick={getResume}>
-        <div className="resume-button">
+      <a href="https://www.jamesanderegg.com/uploads/jamesAndereggResume.pdf" download="James_Anderegg_Resume" className="resume-div">
+        <div className="resume-button" onMouseEnter={() => setResumeTextHidden(true)}
+        onMouseLeave={() => setResumeTextHidden(false)}>
+          
         <i className="far fa-file fa-2x resume-button"></i>
         <h5>My Resume</h5>
+        
+        {textResumeHidden && (
+          <>
+          
+          <h6>Click to Download PDF</h6>
+          </>
+        )}
         </div>
-      </div>
+      </a>
       <div className="resume-div" >
         <div
           className="github-button" onClick={e => window.open("https://github.com/jamesanderegg")}>
@@ -41,8 +51,8 @@ function Resume() {
       </div>
       <div
         className="resume-div"
-        onMouseEnter={() => setTextHidden(true)}
-        onMouseLeave={() => setTextHidden(false)}
+        onMouseEnter={() => setEmailTextHidden(true)}
+        onMouseLeave={() => setEmailTextHidden(false)}
         onClick={() =>
           navigator.clipboard.writeText("jamesanderegg@jamesanderegg.com")
         }
@@ -50,13 +60,15 @@ function Resume() {
       <div className="email-button">
         <i className="fas fa-at fa-2x"></i>
         <h5>Email</h5>
-        <h6>Click to copy to clipboard</h6>
-        
-        {textHidden && (
+        {textEmailHidden && (
           <>
-            <p className="copy-email">jamesanderegg@jamesanderegg.com</p>
+          <h6>Click to copy to clipboard</h6>
+            
           </>
         )}
+        <p className="copy-email">jamesanderegg@jamesanderegg.com</p>
+        
+        
       </div>
       </div>
     </div>

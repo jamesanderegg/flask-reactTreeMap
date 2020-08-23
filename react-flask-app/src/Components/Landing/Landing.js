@@ -1,8 +1,8 @@
 import React from "react";
 import RandoBarChart from "../RandoBarChart";
 import "./Landing.css";
-import WhatIDo from '../WhatIDo/WhatIdo'
-import Logos from '../Logos/Logos'
+import WhatIDo from "../WhatIDo/WhatIdo";
+import Logos from "../Logos/Logos";
 const Landing = (
   <div className="container">
     <div className="jumbotron mt-5 jumbo">
@@ -19,15 +19,15 @@ const Landing = (
           </p>
         </div>
       </div>
-      <div className="row landing-logos-row">
-      <div className="col-md-5 mx-auto landing-enter-col"><h3 style={{ margin: "20px" }}>Click anywhere to enter!</h3></div>
-        <div className="col-lg-7 mx-auto landing-logos-col"><Logos /></div>
+      <div className="landing-logos-row">
+        
+          <h3 >Click anywhere to enter!</h3>
+        
+       
+          <Logos />
       </div>
-      
-      
     </div>
     <WhatIDo />
-
   </div>
 );
 

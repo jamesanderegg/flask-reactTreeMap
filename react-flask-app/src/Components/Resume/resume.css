@@ -6,6 +6,9 @@
     margin: 70px 0;
     
 }
+a:hover{
+    text-decoration: none;
+}
 .resume-div :hover{
     color: rgb(204, 179, 179);
     cursor: pointer;
