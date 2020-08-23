@@ -97,13 +97,9 @@ nav .login:hover {
   background-position: bottom left;
   background-repeat: no-repeat
 }
-/* #datafluent{
-  background-image: url("http://localhost:3000/uploads/images/sky.png");
-  background-size: 100% 100%;
-  background-attachment: fixed;
-  background-position: bottom left;
-  background-repeat: no-repeat
-} */
+#projects{
+  background-image: repeating-linear-gradient(0deg, rgba(255,255,255, 0.07) 0px, rgba(255,255,255, 0.07) 1px,transparent 1px, transparent 26px),repeating-linear-gradient(90deg, rgba(255,255,255, 0.07) 0px, rgba(255,255,255, 0.07) 1px,transparent 1px, transparent 26px),linear-gradient(90deg, rgb(187, 174, 150),rgb(138, 109, 71));
+}
 
 .node .label {
   display: inline;

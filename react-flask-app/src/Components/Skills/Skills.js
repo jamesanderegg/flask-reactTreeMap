@@ -3,7 +3,7 @@ import "./skills.css";
 const Skills = () => {
   return(
     <>
-    <h5 className="skills-title">My Best Tools:</h5>
+    
  <div className="row skills-row">
  
         <ul className="skills-ul">

@@ -18,6 +18,10 @@ const Projects = () => {
   };
   //   let projectList = [];
   const registerTag = (e) => {
+    if(e.target.id === "all"){
+      setTagProject('');
+      return
+    }
     setTagProject(e.target.id);
   };
 

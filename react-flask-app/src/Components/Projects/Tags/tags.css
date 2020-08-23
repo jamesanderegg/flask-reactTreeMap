@@ -1,5 +1,7 @@
 .tag{
     margin: 4px;
+    -webkit-box-shadow: inset -1px 3px 8px 5px #1F87FF, 2px 5px 16px 0px #0B325E, 5px 6px 21px 2px #000000; 
+box-shadow: inset -1px 3px 8px 5px #1F87FF, 2px 5px 16px 0px #0B325E, 5px 6px 21px 2px #000000;
 }
 .tags-button{
     font: bold 14px/1 sans-serif;
@@ -7,6 +9,14 @@
   
   padding: 5px;
   background-color: rgba(26, 91, 230, 0.8);
+  cursor: pointer;
+}
+.tags-button-all{
+  font: bold 14px/1 sans-serif;
+  color: white;
+  
+  padding: 5px;
+  background-color: rgba(8, 4, 255, 0.8);
   cursor: pointer;
 }
 .tag :hover{
@@ -18,9 +28,22 @@
     justify-content: center;
     flex-wrap: wrap;
     margin: 0 auto;
-    width: 85%;
+    
 }
 .tag-title{
+  color: white;
     text-align: center;
-    margin-top: 43px;
+    
+    padding-top: 10px;
+}
+.tags-container{
+  -webkit-box-shadow: inset 7px 5px 15px 5px #000000; 
+box-shadow: inset 8px 6px 20px 5px #0d122e;
+  border: 5px groove #1C6EA4;
+border-radius: 0px 40px 0px 40px;
+  margin: 0 auto;
+  margin-top: 15px;
+  width: 50%;
+  padding-bottom: 15px;
+  background-image: linear-gradient(192deg, rgba(220, 220, 220, 0.39) 0%, rgba(220, 220, 220, 0.39) 12.5%,rgba(190, 190, 190, 0.39) 12.5%, rgba(190, 190, 190, 0.39) 25%,rgba(159, 159, 159, 0.39) 25%, rgba(159, 159, 159, 0.39) 37.5%,rgba(129, 129, 129, 0.39) 37.5%, rgba(129, 129, 129, 0.39) 50%,rgba(99, 99, 99, 0.39) 50%, rgba(99, 99, 99, 0.39) 62.5%,rgba(69, 69, 69, 0.39) 62.5%, rgba(69, 69, 69, 0.39) 75%,rgba(38, 38, 38, 0.39) 75%, rgba(38, 38, 38, 0.39) 87.5%,rgba(8, 8, 8, 0.39) 87.5%, rgba(8, 8, 8, 0.39) 100%),linear-gradient(250deg, rgb(16, 16, 16) 0%, rgb(16, 16, 16) 12.5%,rgb(48, 48, 48) 12.5%, rgb(48, 48, 48) 25%,rgb(81, 81, 81) 25%, rgb(81, 81, 81) 37.5%,rgb(113, 113, 113) 37.5%, rgb(113, 113, 113) 50%,rgb(145, 145, 145) 50%, rgb(145, 145, 145) 62.5%,rgb(177, 177, 177) 62.5%, rgb(177, 177, 177) 75%,rgb(210, 210, 210) 75%, rgb(210, 210, 210) 87.5%,rgb(242, 242, 242) 87.5%, rgb(242, 242, 242) 100%);
 }
