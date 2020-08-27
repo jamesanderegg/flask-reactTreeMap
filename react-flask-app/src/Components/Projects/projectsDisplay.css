@@ -14,3 +14,12 @@
   float: left;
   cursor: pointer;
 }
+.go-back:hover{
+  font: bold 18px/1 sans-serif;
+  color: white;
+  width: 100px;
+  padding: 10px;
+  background-color: rgba(26, 108, 230, 0.8);
+  float: left;
+  cursor: pointer;
+}

@@ -1,9 +1,16 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 import { withRouter } from 'react-router-dom';
 
 const GoBack = ({ registerProjectLoaded }) => {
     console.log('hello')
-    return(<div className="go-back" onClick={registerProjectLoaded} alt="Go back">Go Back</div>)
+    return(<Link className="go-back"
+    to={`/`}
+    
+    onClick={registerProjectLoaded}
+  >
+  Go Back
+  </Link>)
 }
 
 export default withRouter(GoBack);
