@@ -48,7 +48,7 @@ const SidePanel = ({show, hidePanel, userId, setUserId}) => {
               below or click the register Sign up button.{" "}
             </p>
               <div className="signup-nav" onClick={registerClickHandler}>
-              Sign Up
+              Register Here!
             </div>
               <Login userId={userId} setUserId={setUserId} />
               </>
