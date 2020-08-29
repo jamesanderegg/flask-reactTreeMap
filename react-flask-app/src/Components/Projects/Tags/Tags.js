@@ -2,7 +2,6 @@ import React from "react";
 import "./tags.css";
 const Tags = ({ tags, tagsCount, registerTag }) => {
 
-  console.log(tags)
   return (
     <div className="tags-container">
       <h5 className="tag-title">Click to sort the projects!</h5>

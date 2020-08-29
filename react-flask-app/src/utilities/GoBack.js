@@ -3,7 +3,6 @@ import {Link} from 'react-router-dom'
 import { withRouter } from 'react-router-dom';
 
 const GoBack = ({ registerProjectLoaded }) => {
-    console.log('hello')
     return(<Link className="go-back"
     to={`/`}
     
