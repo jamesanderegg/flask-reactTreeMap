@@ -13,11 +13,13 @@ import styled from 'styled-components';
 const API_KEY = "pk.eyJ1IjoianVpY3lqYW1lcyIsImEiOiJjazFzbXY3djcwaHI2M21xMnBub2c3d3JvIn0.nVANyOFAxNMCjO598ZACIg";
 
 const Wrapper = styled.div`
-    width: ${props => props.width};
+    width: 85%;
     height: ${props => props.height};
     z-index: 3
     margin: 0 auto;
-    min-width: 450px;
+    min-width: 300px;
+    left: 50%;
+    transform: translateX(-50%);
 `;
 
 
@@ -75,7 +77,7 @@ export default class Map extends React.Component {
         })
     }
     drawMarkers(newProps){        
-
+        console.log(newProps[0].geometry)
         this.markers = new L1.MarkerClusterGroup();
         
         for (var i = 0; i < newProps.length; i++){
@@ -119,11 +121,12 @@ export default class Map extends React.Component {
     componentWillReceiveProps(newProps){
         // Create a new marker cluster group
         let data= []
-        console.log(newProps.props)
+        
         if(newProps.props.length>0){
             for(let i=0; i< newProps.props[0].length; i++){
                 data.push(newProps.props[0][i])
             }
+            
             this.drawMarkers(data)
             
             this.setState({ 

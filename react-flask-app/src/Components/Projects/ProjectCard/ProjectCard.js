@@ -19,7 +19,7 @@ const ProjectCard = ({ projectList, setLoadedProject }) => {
                 src={project.image}
                 alt={project.id}
               />
-              
+              <h6>Click to flip!</h6>
             </div>
             <div className="back">
               <div className="card-body">

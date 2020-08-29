@@ -19,7 +19,7 @@ class LeafletControl extends React.Component {
                 <div className="classname leaflet-control">
                     <div className="container-leaf">
                         <input id="toggle-leaf" type="checkbox" onChange={ this.handleChecked} />
-                        <label id="label-leaf" for="toggle-leaf" ><h4>Search</h4></label>
+                        <label id="label-leaf" htmlFor="toggle-leaf" ><h4>Search</h4></label>
                         <div id="expand-leaf">
                             <form noValidate onSubmit={this.props.onSubmit}>
                                 <input id="search-box" type="search" name="searchbox" placeholder="Search" onChange={this.props.onChange} value={this.props.searchbox}/>
